@@ -1,4 +1,5 @@
 import { counties, kenyaLocations } from "./kenyalocations.js";
+import { apiRequest, showApiError } from "./api.js";
 
 const form = document.querySelector("#registration-form");
 const county = document.querySelector("#county");
@@ -44,7 +45,7 @@ function showStep(next) {
   document.querySelector("#continue-label").textContent = step === 2 ? "Create account" : "Continue";
 }
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const fields = [...forms[step].querySelectorAll("input, select")];
   const firstInvalidField = fields.find((field) => !field.checkValidity());
@@ -62,7 +63,19 @@ form.addEventListener("submit", (event) => {
     confirmation.focus();
     return;
   }
-  window.location.href = "./loading.html";
+  const submitButton = form.querySelector('[type="submit"]');
+  submitButton.disabled = true;
+  document.querySelector("#continue-label").textContent = "Creating account…";
+  try {
+    const values = Object.fromEntries(new FormData(form).entries());
+    values.consent = values.consent === "true";
+    await apiRequest("/auth/register", { method: "POST", body: JSON.stringify(values) });
+    window.location.href = "./dashboard.html";
+  } catch (error) {
+    showApiError(formError, error);
+    submitButton.disabled = false;
+    document.querySelector("#continue-label").textContent = "Create account";
+  }
 });
 
 back.addEventListener("click", () => showStep(step - 1));

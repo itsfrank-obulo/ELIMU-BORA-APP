@@ -60,28 +60,28 @@
                 <label class="field-label"><span>First name</span><input class="field" name="firstName" placeholder="e.g. Amina" required></label>
                 <label class="field-label"><span>Last name</span><input class="field" name="lastName" placeholder="e.g. Wanjiku" required></label>
                 <label class="field-label"><span>National ID / Birth certificate no.</span><input class="field" name="idNumber" placeholder="Enter document number" required></label>
-                <label class="field-label"><span>Date of birth</span><input class="field" name="dob" type="date" required></label>
+                <label class="field-label"><span>Date of birth</span><input class="field" name="dateOfBirth" type="date" required></label>
                 <label class="field-label"><span>Phone number</span><input class="field" name="phone" type="tel" placeholder="+254 7XX XXX XXX" required><small>We’ll send application updates here.</small></label>
                 <label class="field-label"><span>Email address (optional)</span><input class="field" name="email" type="email" placeholder="name@example.com"></label>
               </section>
 
               <section class="form-step hidden grid gap-5 sm:grid-cols-2" data-form-step="1">
-                <label class="field-label"><span>County</span><select class="field" id="county" required><option value="">Select your county</option></select></label>
-                <label class="field-label"><span>Constituency</span><select class="field" id="constituency" disabled required><option value="">Choose a county first</option></select></label>
-                <label class="field-label"><span>Ward</span><input class="field" placeholder="Enter your ward" required></label>
-                <label class="field-label"><span>Village / Estate</span><input class="field" placeholder="Enter your local area" required></label>
-                <label class="field-label"><span>Current institution</span><input class="field" placeholder="School, college or university" required></label>
-                <label class="field-label"><span>Education level</span><select class="field" required><option value="">Select education level</option><option>Secondary school</option><option>TVET / College</option><option>University</option><option>Special needs institution</option></select></label>
+                <label class="field-label"><span>County</span><select class="field" id="county" name="county" required><option value="">Select your county</option></select></label>
+                <label class="field-label"><span>Constituency</span><select class="field" id="constituency" name="constituency" disabled required><option value="">Choose a county first</option></select></label>
+                <label class="field-label"><span>Ward</span><input class="field" name="ward" placeholder="Enter your ward" required></label>
+                <label class="field-label"><span>Village / Estate</span><input class="field" name="village" placeholder="Enter your local area" required></label>
+                <label class="field-label"><span>Current institution</span><input class="field" name="institution" placeholder="School, college or university" required></label>
+                <label class="field-label"><span>Education level</span><select class="field" name="educationLevel" required><option value="">Select education level</option><option>Secondary school</option><option>TVET / College</option><option>University</option><option>Special needs institution</option></select></label>
               </section>
 
               <section class="form-step hidden space-y-5" data-form-step="2">
-                <label class="field-label"><span>Create password</span><span class="relative block"><input class="field pr-12" id="password" type="password" placeholder="Enter a strong password" minlength="8" pattern="(?=.*\d).{8,}" title="Use at least 8 characters, including a number." required><button id="toggle-password" type="button" class="password-toggle" aria-label="Show password">Show</button></span><small>Use at least 8 characters, including a number.</small></label>
+                <label class="field-label"><span>Create password</span><span class="relative block"><input class="field pr-12" id="password" name="password" type="password" placeholder="Enter a strong password" minlength="8" pattern="(?=.*\d).{8,}" title="Use at least 8 characters, including a number." required><button id="toggle-password" type="button" class="password-toggle" aria-label="Show password">Show</button></span><small>Use at least 8 characters, including a number.</small></label>
                 <label class="field-label"><span>Confirm password</span><input class="field" id="confirm-password" type="password" placeholder="Re-enter your password" required><small id="password-error" class="hidden text-red-600">Passwords do not match.</small></label>
-                <label class="terms"><input class="mt-0.5 h-4 w-4 accent-emerald-700" type="checkbox" required><span>I confirm that the information provided is accurate and agree to the <button type="button">privacy notice</button> and <button type="button">terms of use</button>.</span></label>
+                <label class="terms"><input class="mt-0.5 h-4 w-4 accent-emerald-700" name="consent" type="checkbox" value="true" required><span>I confirm that the information provided is accurate and agree to the <button type="button">privacy notice</button> and <button type="button">terms of use</button>.</span></label>
               </section>
 
               <div class="mt-8 flex items-center justify-between gap-4">
-                <p id="sign-in" class="text-sm text-slate-500">Already registered? <a href="./dashboard.html" class="font-bold text-emerald-700">Sign in</a></p>
+                <p id="sign-in" class="text-sm text-slate-500">Already registered? <a href="./login.html" class="font-bold text-emerald-700">Sign in</a></p>
                 <button id="back-button" type="button" class="hidden back-button">Back</button>
                 <button type="submit" class="primary-button"><span id="continue-label">Continue</span><span aria-hidden="true">›</span></button>
               </div>

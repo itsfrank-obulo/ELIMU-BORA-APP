@@ -7,21 +7,22 @@
       <main class="portal-main narrow-main">
         <div class="page-heading"><div><p class="eyebrow">Account settings</p><h1>My profile</h1><p>Keep your personal and education information up to date.</p></div></div>
         <form id="profile-form" class="panel profile-form">
-          <div class="profile-intro"><span class="large-avatar">AW</span><div><h2>Amina Wanjiku</h2><p>Student account · Verified</p></div><span class="status-badge success">Verified profile</span></div>
+          <div class="profile-intro"><span class="large-avatar">EF</span><div><h2>Student profile</h2><p>Student account</p></div></div>
           <div class="form-section"><h3>Personal information</h3><div class="profile-grid">
-            <label class="field-label"><span>First name</span><input class="field" value="Amina"></label><label class="field-label"><span>Last name</span><input class="field" value="Wanjiku"></label>
-            <label class="field-label"><span>Phone number</span><input class="field" value="+254 712 345 678"></label><label class="field-label"><span>Email address</span><input class="field" type="email" value="amina.wanjiku@example.com"></label>
-            <label class="field-label"><span>National ID / Birth certificate</span><input class="field locked-field" value="39842175" readonly><small>Contact support to change this.</small></label><label class="field-label"><span>Date of birth</span><input class="field" type="date" value="2003-06-14"></label>
+            <label class="field-label"><span>First name</span><input class="field" name="firstName" required></label><label class="field-label"><span>Last name</span><input class="field" name="lastName" required></label>
+            <label class="field-label"><span>Phone number</span><input class="field" name="phone" required></label><label class="field-label"><span>Email address</span><input class="field" name="email" type="email"></label>
+            <label class="field-label"><span>National ID / Birth certificate</span><input class="field locked-field" name="idNumber" readonly><small>Contact support to change this.</small></label><label class="field-label"><span>Date of birth</span><input class="field" name="dateOfBirth" type="date" required></label>
           </div></div>
           <div class="form-section"><h3>Location &amp; education</h3><div class="profile-grid">
-            <label class="field-label"><span>County</span><input class="field" value="Nairobi"></label><label class="field-label"><span>Constituency</span><input class="field" value="Westlands"></label>
-            <label class="field-label"><span>Ward</span><input class="field" value="Parklands/Highridge"></label><label class="field-label"><span>Institution</span><input class="field" value="University of Nairobi"></label>
+            <label class="field-label"><span>County</span><input class="field" name="county" required></label><label class="field-label"><span>Constituency</span><input class="field" name="constituency" required></label>
+            <label class="field-label"><span>Ward</span><input class="field" name="ward" required></label><label class="field-label"><span>Institution</span><input class="field" name="institution" required></label>
+            <label class="field-label"><span>Village / Estate</span><input class="field" name="village" required></label><label class="field-label"><span>Education level</span><input class="field" name="educationLevel" required></label>
           </div></div>
           <div class="form-actions"><a href="./dashboard.html" class="back-button">Cancel</a><button class="primary-button" type="submit">Save changes</button></div>
           <p id="save-notice" class="save-notice hidden">Your profile changes have been saved.</p>
         </form>
       </main>
     </div>
-    <script>document.querySelector("#profile-form").addEventListener("submit",e=>{e.preventDefault();document.querySelector("#save-notice").classList.remove("hidden")})</script>
+    <script type="module" src="./portal.js"></script>
   </body>
 </html>

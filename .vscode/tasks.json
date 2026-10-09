@@ -19,6 +19,25 @@
           "endsPattern": "Serving HTTP on 127\\.0\\.0\\.1 port 5173"
         }
       }
+    },
+    {
+      "label": "Start Elimu Fund API",
+      "type": "shell",
+      "command": "C:/Users/Administrator/.local/bin/python3.14.exe",
+      "args": ["server.py"],
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "elimu-fund-api",
+        "pattern": {
+          "regexp": "^(.*)$",
+          "message": 1
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Elimu Fund API listening on http://127\\.0\\.0\\.1:8000",
+          "endsPattern": "Stopping Elimu Fund API"
+        }
+      }
     }
   ]
 }

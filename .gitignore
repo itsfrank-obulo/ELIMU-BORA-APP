@@ -1,0 +1,6 @@
+# Local SQLite data and transient Python files
+elimu_fund.sqlite3
+elimu_fund.sqlite3-shm
+elimu_fund.sqlite3-wal
+__pycache__/
+*.py[cod]
