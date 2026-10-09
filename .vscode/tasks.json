@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Elimu Fund site",
+      "type": "shell",
+      "command": "C:/Users/Administrator/.local/bin/python3.14.exe",
+      "args": ["-m", "http.server", "5173", "--bind", "127.0.0.1"],
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "http.server",
+        "pattern": {
+          "regexp": "^(.*)$",
+          "message": 1
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Serving HTTP on 127\\.0\\.0\\.1 port 5173",
+          "endsPattern": "Serving HTTP on 127\\.0\\.0\\.1 port 5173"
+        }
+      }
+    }
+  ]
+}

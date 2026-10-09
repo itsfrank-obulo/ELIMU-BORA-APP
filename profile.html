@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>My profile · Elimu Fund</title><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="./index.css"></head>
+  <body class="portal-body">
+    <header class="portal-header"><a class="portal-brand" href="./dashboard.html"><span class="logo-box"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3 5 6v5c0 4.5 2.7 8 7 10 4.3-2 7-5.5 7-10V6l-7-3Z"/></svg></span><span><strong>Elimu Fund</strong><small>NG-CDF Bursary Portal</small></span></a><div class="portal-user"><span class="user-avatar">AW</span><span class="hidden sm:block"><strong>Amina Wanjiku</strong><small>Westlands Constituency</small></span><a href="./Index.html" class="logout-link">Sign out</a></div></header>
+    <div class="portal-shell"><aside class="portal-nav"><nav><a href="./dashboard.html"><span>⌂</span> Overview</a><a class="active" href="./profile.html"><span>○</span> My profile</a><a href="./tracking.html"><span>◇</span> Track application</a><a href="./applications.html"><span>▤</span> Past applications</a><a href="./contacts.html"><span>□</span> Contact &amp; help</a></nav></aside>
+      <main class="portal-main narrow-main">
+        <div class="page-heading"><div><p class="eyebrow">Account settings</p><h1>My profile</h1><p>Keep your personal and education information up to date.</p></div></div>
+        <form id="profile-form" class="panel profile-form">
+          <div class="profile-intro"><span class="large-avatar">AW</span><div><h2>Amina Wanjiku</h2><p>Student account · Verified</p></div><span class="status-badge success">Verified profile</span></div>
+          <div class="form-section"><h3>Personal information</h3><div class="profile-grid">
+            <label class="field-label"><span>First name</span><input class="field" value="Amina"></label><label class="field-label"><span>Last name</span><input class="field" value="Wanjiku"></label>
+            <label class="field-label"><span>Phone number</span><input class="field" value="+254 712 345 678"></label><label class="field-label"><span>Email address</span><input class="field" type="email" value="amina.wanjiku@example.com"></label>
+            <label class="field-label"><span>National ID / Birth certificate</span><input class="field locked-field" value="39842175" readonly><small>Contact support to change this.</small></label><label class="field-label"><span>Date of birth</span><input class="field" type="date" value="2003-06-14"></label>
+          </div></div>
+          <div class="form-section"><h3>Location &amp; education</h3><div class="profile-grid">
+            <label class="field-label"><span>County</span><input class="field" value="Nairobi"></label><label class="field-label"><span>Constituency</span><input class="field" value="Westlands"></label>
+            <label class="field-label"><span>Ward</span><input class="field" value="Parklands/Highridge"></label><label class="field-label"><span>Institution</span><input class="field" value="University of Nairobi"></label>
+          </div></div>
+          <div class="form-actions"><a href="./dashboard.html" class="back-button">Cancel</a><button class="primary-button" type="submit">Save changes</button></div>
+          <p id="save-notice" class="save-notice hidden">Your profile changes have been saved.</p>
+        </form>
+      </main>
+    </div>
+    <script>document.querySelector("#profile-form").addEventListener("submit",e=>{e.preventDefault();document.querySelector("#save-notice").classList.remove("hidden")})</script>
+  </body>
+</html>

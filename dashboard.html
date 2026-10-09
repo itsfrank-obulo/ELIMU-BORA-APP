@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard · Elimu Fund</title><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="./index.css">
+  </head>
+  <body class="portal-body">
+    <header class="portal-header">
+      <a class="portal-brand" href="./dashboard.html"><span class="logo-box"><svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 3 5 6v5c0 4.5 2.7 8 7 10 4.3-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><strong>Elimu Fund</strong><small>NG-CDF Bursary Portal</small></span></a>
+      <div class="portal-user"><span class="user-avatar">AW</span><span class="hidden sm:block"><strong>Amina Wanjiku</strong><small>Westlands Constituency</small></span><a href="./Index.html" class="logout-link">Sign out</a></div>
+    </header>
+    <div class="portal-shell">
+      <aside class="portal-nav">
+        <nav>
+          <a class="active" href="./dashboard.html"><span>⌂</span> Overview</a>
+          <a href="./profile.html"><span>○</span> My profile</a>
+          <a href="./tracking.html"><span>◇</span> Track application</a>
+          <a href="./applications.html"><span>▤</span> Past applications</a>
+          <a href="./contacts.html"><span>□</span> Contact &amp; help</a>
+        </nav>
+        <div class="nav-help"><strong>Need assistance?</strong><p>Our bursary support team is ready to help.</p><a href="./contacts.html">Contact support</a></div>
+      </aside>
+      <main class="portal-main">
+        <div class="page-heading"><div><p class="eyebrow">Monday, 17 March 2025</p><h1>Welcome back, Amina</h1><p>Here’s the latest update on your bursary application.</p></div><a href="./tracking.html" class="outline-button">View full status</a></div>
+
+        <section class="mp-message">
+          <div class="mp-monogram">MP</div>
+          <div><p class="eyebrow light">A message from your Member of Parliament</p><blockquote>“Your determination to pursue education is an investment in our constituency’s future. Keep working hard, stay hopeful, and remember that we are proud to support your journey.”</blockquote><p class="mp-signature">Office of the Member of Parliament · Westlands Constituency</p></div>
+        </section>
+
+        <div class="summary-grid">
+          <article class="summary-card"><span class="summary-icon green">◇</span><div><small>Application status</small><strong>Successful</strong><p>Award approved on 12 Mar 2025</p></div></article>
+          <article class="summary-card"><span class="summary-icon gold">KSh</span><div><small>Amount awarded</small><strong>KSh 20,000</strong><p>Paid directly to your institution</p></div></article>
+          <article class="summary-card"><span class="summary-icon blue">▤</span><div><small>Application reference</small><strong>WST-25-00842</strong><p>2024/2025 bursary cycle</p></div></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="panel">
+            <div class="panel-heading"><div><p class="eyebrow">Application information</p><h2>Your bursary details</h2></div><span class="status-badge success">Successful</span></div>
+            <dl class="detail-list">
+              <div><dt>Student name</dt><dd>Amina Wanjiku</dd></div><div><dt>Institution</dt><dd>University of Nairobi</dd></div>
+              <div><dt>Education level</dt><dd>University</dd></div><div><dt>Constituency</dt><dd>Westlands</dd></div>
+              <div><dt>Date submitted</dt><dd>18 January 2025</dd></div><div><dt>Admission number</dt><dd>UON/2024/18402</dd></div>
+            </dl>
+            <a class="panel-link" href="./tracking.html">View application timeline <span>→</span></a>
+          </section>
+          <aside class="panel eligibility-card">
+            <p class="eyebrow">Next application</p><span class="eligibility-icon"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="m8 8 8 8M16 8l-8 8"/></svg></span>
+            <h2>Not currently eligible</h2><p>You received a bursary in the previous cycle. Applicants with a successful previous award cannot submit another application this cycle.</p>
+            <a href="./applications.html">Review eligibility details</a>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
